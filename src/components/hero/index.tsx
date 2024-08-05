@@ -24,7 +24,7 @@ const textVariants = {
     },
   },
 };
-const sliderVariants = {
+/*const sliderVariants = {
   initial: {
     x: 0,
   },
@@ -36,10 +36,10 @@ const sliderVariants = {
       duration: 20,
     },
   },
-};
+};*/
 
 function Hero() {
-  const { rive, RiveComponent } = useRive({
+  const { RiveComponent } = useRive({
     src: "/svg/inicio.riv",
     stateMachines: "State Machine 1",
     animations: "Timeline 1",

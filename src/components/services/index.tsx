@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useRef } from "react";
 import { useRive } from "@rive-app/react-canvas";
 import "./services.scss";
 
@@ -25,7 +24,7 @@ const textVariants = {
     },
   },
 };
-const sliderVariants = {
+/*const sliderVariants = {
   initial: {
     x: 0,
   },
@@ -37,11 +36,10 @@ const sliderVariants = {
       duration: 20,
     },
   },
-};
+};*/
 
 function Services() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { rive, RiveComponent } = useRive({
+  const { RiveComponent } = useRive({
     src: "/svg/servicios.riv",
     stateMachines: "State Machine 1",
     artboard: "Artboard",
