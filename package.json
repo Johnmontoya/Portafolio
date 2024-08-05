@@ -4,15 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "node ./dist/index.html",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d tsc -b && vite build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d tsc -b && vite build"
   },
   "dependencies": {
-    "@rive-app/canvas": "^2.19.4",
     "@rive-app/react-canvas": "^4.13.3",
     "autoprefixer": "^10.4.19",
     "framer-motion": "^11.3.8",
