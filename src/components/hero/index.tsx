@@ -40,7 +40,7 @@ const textVariants = {
 
 function Hero() {
   const { RiveComponent } = useRive({
-    src: "/svg/inicio.riv",
+    src: "https://res.cloudinary.com/dnx4de9yv/raw/upload/v1723075335/Portafolio/hero.riv",
     stateMachines: "State Machine 1",
     animations: "Timeline 1",
     artboard: "Artboard",
