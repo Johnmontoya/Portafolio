@@ -53,7 +53,7 @@ function Services() {
         <img src="./carretera.png" className="w-full"/>
       </div>
       <div className="wrapper flex flex-row-reverse items-center z-40">
-        <div className="h-1/2 w-full absolute -bottom-46 md:-bottom-5 lg:bottom-10 xl:bottom-16">
+        <div className="h-1/2 w-full absolute bottom-0 sm:-bottom-20 md:bottom-0 lg:bottom-0 left-0 bg-red-600">
           <RiveComponent
             style={{ cursor: "pointer" }}
             //onMouseEnter={() => rive && rive.play()}
