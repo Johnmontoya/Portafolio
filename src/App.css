@@ -1,0 +1,30 @@
+* {
+  overflow-x: hidden;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: all 0.7s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
