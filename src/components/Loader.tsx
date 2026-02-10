@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logo from '../../public/logo.svg'
 
 export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
     const [progress, setProgress] = useState(0);
@@ -27,9 +28,7 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
         text-white
       "
         >
-            <h1 className="text-3xl font-semibold mb-2">
-                John Montoya
-            </h1>
+            <img src={logo} alt="Logo" className="w-20 h-20" />
             <p className="text-gray-400 mb-8">
                 Building modern web applications
             </p>

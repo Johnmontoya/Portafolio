@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useI18n } from "react-simple-i18n";
 import usaFlag from '../../public/eeuu.svg'
 import colombiaFlag from '../../public/colombia.svg'
+import logo from '../../public/logo.svg'
 
 const Header = ({ setOpen }: { setOpen: (open: boolean) => void }) => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -23,10 +24,7 @@ const Header = ({ setOpen }: { setOpen: (open: boolean) => void }) => {
     return (
         <header className={`w-full fixed bg-transparent left-0 right-0 top-0 h-[70px] z-50 flex items-center justify-between px-6 md:px-10 transition-all duration-300 ${isScrolled ? 'bg-slate-900/50 backdrop-blur-md' : ''}`}>
             <div className="flex items-center gap-3">
-                <div
-                    className="w-[18px] h-[18px] rounded-full bg-gradient-to-br from-[#4fffa7] to-[#4b84ff] shadow-[0_6px_20px_rgba(123,75,255,0.18)]"
-                />
-                <span className="font-bold tracking-wide text-white text-lg">JM</span>
+                <img src={logo} alt="Logo" className="w-10 h-10" />
             </div>
 
             <nav className="flex items-center gap-4.5 text-sm text-white/65">
