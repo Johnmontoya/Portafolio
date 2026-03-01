@@ -16,6 +16,8 @@ const langData = {
         restAPIsText: 'I develop REST APIs with Node.js and NestJS, including authentication, database integration, and basic business logic.',
         frontEnd: 'Frontend',
         frontEndText: 'I create responsive user interfaces with React, focusing on usability, component structure, and performance.',
+        close: 'Close',
+        visitSite: 'Visit Site',
     },
     esPE: {
         projects: 'Proyectos',
@@ -34,6 +36,8 @@ const langData = {
         restAPIsText: 'Desarrollo APIs REST con Node.js y NestJS, incluyendo autenticación, integración con bases de datos y lógica de negocio básica.',
         frontEnd: 'Frontend',
         frontEndText: 'Creo interfaces de usuario responsivas con React, centrándome en la usabilidad, la estructura de componentes y el rendimiento.',
+        close: 'Cerrar',
+        visitSite: 'Visitar Sitio',
     },
 }
 

@@ -22,7 +22,7 @@ const Header = ({ setOpen }: { setOpen: (open: boolean) => void }) => {
         { title: 'Projects', href: '#projects' },
     ];
     return (
-        <header className={`w-full fixed bg-transparent left-0 right-0 top-0 h-[70px] z-50 flex items-center justify-between px-6 md:px-10 transition-all duration-300 ${isScrolled ? 'bg-slate-900/50 backdrop-blur-md' : ''}`}>
+        <header className={`w-full fixed bg-transparent left-0 right-0 top-0 h-[70px] z-40 flex items-center justify-between px-6 md:px-10 transition-all duration-300 ${isScrolled ? 'bg-slate-900/50 backdrop-blur-md' : ''}`}>
             <div className="flex items-center gap-3">
                 <img src={logo} alt="Logo" className="w-10 h-10" />
             </div>
