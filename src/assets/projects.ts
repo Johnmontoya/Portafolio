@@ -60,11 +60,11 @@ const projectsData = [
             { name: 'JWT', icon: jwt }
         ],
         admin: {
-            cuenta: 'Admin',
+            cuenta: 'admin@example.com',
             contraseña: 'Admin1234'
         },
         user: {
-            cuenta: 'User',
+            cuenta: 'usuario@gmail.com',
             contraseña: 'User1234'
         }
     },
@@ -89,11 +89,11 @@ const projectsData = [
             { name: 'JWT', icon: jwt }
         ],
         admin: {
-            cuenta: 'Admin',
+            cuenta: 'admin@example.com',
             contraseña: 'Admin1234'
         },
         user: {
-            cuenta: 'User',
+            cuenta: 'usuario@gmail.com',
             contraseña: 'User1234'
         }
     }
