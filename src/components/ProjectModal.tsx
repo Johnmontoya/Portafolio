@@ -136,11 +136,11 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                                 <div className="space-y-2">
                                     <div className="flex justify-between items-center bg-black/20 p-2 rounded-lg border border-white/5">
                                         <span className="text-[10px] text-white/30 font-bold uppercase">User</span>
-                                        <span className="text-xs text-white font-mono font-bold">Admin</span>
+                                        <span className="text-xs text-white font-mono font-bold">{project?.admin?.cuenta}</span>
                                     </div>
                                     <div className="flex justify-between items-center bg-black/20 p-2 rounded-lg border border-white/5">
                                         <span className="text-[10px] text-white/30 font-bold uppercase">Pass</span>
-                                        <span className="text-xs text-white font-mono font-bold">Admin1234</span>
+                                        <span className="text-xs text-white font-mono font-bold">{project?.admin?.contraseña}</span>
                                     </div>
                                 </div>
                             </div>
@@ -154,11 +154,11 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                                 <div className="space-y-2">
                                     <div className="flex justify-between items-center bg-black/20 p-2 rounded-lg border border-white/5">
                                         <span className="text-[10px] text-white/30 font-bold uppercase">User</span>
-                                        <span className="text-xs text-white font-mono font-bold">User</span>
+                                        <span className="text-xs text-white font-mono font-bold">{project?.user?.cuenta}</span>
                                     </div>
                                     <div className="flex justify-between items-center bg-black/20 p-2 rounded-lg border border-white/5">
                                         <span className="text-[10px] text-white/30 font-bold uppercase">Pass</span>
-                                        <span className="text-xs text-white font-mono font-bold">User1234</span>
+                                        <span className="text-xs text-white font-mono font-bold">{project?.user?.contraseña}</span>
                                     </div>
                                 </div>
                             </div>

@@ -15,6 +15,14 @@ export interface Project {
     image: string;
     link: string;
     tecnologies?: Technology[];
+    admin?: {
+        cuenta: string;
+        contraseña: string;
+    };
+    user?: {
+        cuenta: string;
+        contraseña: string;
+    };
 }
 
 const Projects = () => {
