@@ -16,17 +16,17 @@ const projectsData = [
     {
         title: 'EleCommerce',
         category: 'NODEJS / REACTJS',
-        text: 'Aplicación de comercio electrónico con carrito de compras, pasarela de pagos y gestión de productos.',
-        image: 'https://res.cloudinary.com/dnx4de9yv/image/upload/v1770080444/Portafolio/s8unjpx9oowtiv47dn0y.jpg',
+        text: 'Aplicación de comercio electrónico con carrito de compras, pasarela de pagos, autenticación, IA, y gestión de productos.',
+        image: 'https://res.cloudinary.com/dnx4de9yv/image/upload/v1772857220/Portafolio/omipbapliznmfhlt4cfq.jpg',
         link: 'https://ele-commerce.vercel.app',
         tecnologies: [
             { name: 'React', icon: react },
             { name: 'Node.js', icon: nodejs },
             { name: 'MongoDB', icon: mongo },
+            { name: 'PostgreSQL', icon: postgresql },
+            { name: 'Prisma', icon: prisma },
             { name: 'Tailwind CSS', icon: tailwind },
-            { name: 'Storybook', icon: storybook },
             { name: 'Jest', icon: jest },
-            { name: 'Swagger', icon: swagger },
             { name: 'Google Gemini', icon: gemini },
             { name: 'GitHub Actions', icon: githubaction },
             { name: 'JWT', icon: jwt }
