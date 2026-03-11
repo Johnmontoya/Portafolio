@@ -1,5 +1,7 @@
 import { useI18n } from "react-simple-i18n";
 import { useEffect, useState } from "react";
+import { GiWorld } from "react-icons/gi";
+import { FaGithub } from "react-icons/fa";
 import type { Project } from "./Projects";
 
 interface ProjectModalProps {
@@ -165,18 +167,28 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                         </div>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row items-center gap-4">
+                    <div className="flex flex-col sm:flex-row items-center gap-4 px-10">
                         <a
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full sm:flex-1 bg-white text-black font-bold py-4 rounded-xl text-center hover:bg-white/90 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-white/5 uppercase text-xs tracking-widest"
+                            className="w-full sm:flex-1 bg-white text-black font-bold py-4 rounded-xl text-center hover:bg-zinc-900 hover:text-white shadow-lg shadow-white/5 uppercase text-xs tracking-widest"
                         >
+                            <GiWorld className="inline-block mr-2" size={20} />
                             {t('visitSite')}
+                        </a>
+                        <a
+                            href={project.link_github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full sm:flex-1 bg-white text-black font-bold py-4 rounded-xl text-center hover:bg-zinc-900 hover:text-white shadow-lg shadow-white/5 uppercase text-xs tracking-widest"
+                        >
+                            <FaGithub className="inline-block mr-2" size={20} />
+                            {t('github')}
                         </a>
                         <button
                             onClick={handleClose}
-                            className="w-full sm:w-auto px-10 py-4 rounded-xl border border-white/10 font-bold text-white hover:bg-white/5 transition-all text-xs uppercase tracking-widest"
+                            className="w-full sm:w-auto px-10 py-4 rounded-xl border border-white/10 font-bold text-white hover:bg-zinc-900 hover:text-white shadow-lg cursor-pointer shadow-white/5 uppercase text-xs tracking-widest"
                         >
                             {t('close')}
                         </button>

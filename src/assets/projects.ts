@@ -11,6 +11,10 @@ import jwt from "../../public/logos/jwt.svg";
 import nestjs from "../../public/logos/nestjs.svg";
 import postgresql from "../../public/logos/postgresql.svg";
 import prisma from "../../public/logos/prisma.svg";
+import supabase from "../../public/logos/supabase.svg";
+import openai from "../../public/logos/openai.svg";
+import grok from "../../public/logos/grok.svg";
+import whatsappwebjs from "../../public/logos/whatsappwebjs.svg";
 
 const projectsData = [
     {
@@ -19,6 +23,9 @@ const projectsData = [
         text: 'Aplicación de comercio electrónico con carrito de compras, pasarela de pagos, autenticación, IA, y gestión de productos.',
         image: 'https://res.cloudinary.com/dnx4de9yv/image/upload/v1772857220/Portafolio/omipbapliznmfhlt4cfq.jpg',
         link: 'https://ele-commerce.vercel.app',
+        link_github: 'https://github.com/Johnmontoya/EleCommerce',
+        selling: false,
+        selling_note: '',
         tecnologies: [
             { name: 'React', icon: react },
             { name: 'Node.js', icon: nodejs },
@@ -47,6 +54,9 @@ const projectsData = [
         animaciones fluidas, gestión de publicaciones y comentarios.`,
         image: 'https://res.cloudinary.com/dnx4de9yv/image/upload/v1772380450/Portafolio/smimce05sc1sd8brmnnc.jpg',
         link: 'https://blog-app-web-crisol.vercel.app',
+        link_github: 'https://github.com/Johnmontoya/BlogAppWebCrisol',
+        selling: false,
+        selling_note: '',
         tecnologies: [
             { name: 'React', icon: react },
             { name: 'Node.js', icon: nodejs },
@@ -74,6 +84,9 @@ const projectsData = [
         text: 'Aplicación de seguimiento de fitness con seguimiento de ejercicios, nutrición y progreso.',
         image: 'https://res.cloudinary.com/dnx4de9yv/image/upload/v1772501515/Portafolio/dhxokex1bc4j4vmrkbrb.jpg',
         link: 'https://fittrackpro-hazel.vercel.app',
+        link_github: 'https://github.com/Johnmontoya/FitnnestAI',
+        selling: false,
+        selling_note: '',
         tecnologies: [
             { name: 'React', icon: react },
             { name: 'NestJS', icon: nestjs },
@@ -94,6 +107,36 @@ const projectsData = [
         },
         user: {
             cuenta: 'usuario@gmail.com',
+            contraseña: 'User1234'
+        }
+    }, {
+        title: 'OmniBot AI',
+        category: 'NODEJS / REACTJS',
+        text: 'Aplicación de chatbot con IA para Whatsapp.',
+        image: 'https://res.cloudinary.com/dnx4de9yv/image/upload/v1773238333/Portafolio/bn8oou3sjmesugk5rxk8.jpg',
+        link: 'https://chatbot-bay-omega-36.vercel.app/login',
+        link_github: '',
+        selling: true,
+        selling_note: 'Actualmente esta siendo probado en un restaurante local. Link github no disponible',
+        tecnologies: [
+            { name: 'React', icon: react },
+            { name: 'Node.js', icon: nodejs },
+            { name: 'Supabase', icon: supabase },
+            { name: 'PostgreSQL', icon: postgresql },
+            { name: 'Tailwind CSS', icon: tailwind },
+            { name: 'Jest', icon: jest },
+            { name: 'Google Gemini', icon: gemini },
+            { name: 'OpenAI', icon: openai },
+            { name: 'GroQ', icon: grok },
+            { name: 'GitHub Actions', icon: githubaction },
+            { name: 'WhatsAppWebJS', icon: whatsappwebjs }
+        ],
+        admin: {
+            cuenta: 'Admin',
+            contraseña: 'Admin1234'
+        },
+        user: {
+            cuenta: 'User',
             contraseña: 'User1234'
         }
     }

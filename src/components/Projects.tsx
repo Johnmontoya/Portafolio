@@ -14,6 +14,7 @@ export interface Project {
     text: string;
     image: string;
     link: string;
+    link_github: string;
     tecnologies?: Technology[];
     admin?: {
         cuenta: string;
@@ -51,8 +52,15 @@ const Projects = () => {
                             }}
                         >
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                            <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-bold bg-gradient-to-r from-[#4b84ff] to-[#4fffa7] text-white">
-                                {project.category}
+                            <div className="flex justify-between">
+                                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-bold bg-gradient-to-r from-[#4b84ff] to-[#4fffa7] text-white">
+                                    {project.category}
+                                </div>
+                                {project.selling && (
+                                    <div className="w-28 absolute top-0 right-0 px-2.5 py-1 rounded-md text-xs font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-center">
+                                        {project.selling_note}
+                                    </div>
+                                )}
                             </div>
                             <div className="absolute bottom-3 left-3 z-10 bg-black/50 px-2.5 py-1 rounded-md">
                                 <div className="font-bold text-white">
