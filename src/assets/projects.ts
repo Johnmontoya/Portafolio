@@ -16,6 +16,7 @@ import openai from "../../public/logos/openai.svg";
 import grok from "../../public/logos/grok.svg";
 import whatsappwebjs from "../../public/logos/whatsappwebjs.svg";
 import astro from "../../public/logos/astro.svg";
+import nextjs from "../../public/logos/nextjs.svg";
 
 const projectsData = [
     {
@@ -152,6 +153,28 @@ const projectsData = [
         selling_note: '',
         tecnologies: [
             { name: 'Astro', icon: astro },
+        ],
+        admin: {
+            cuenta: '',
+            contraseña: ''
+        },
+        user: {
+            cuenta: '',
+            contraseña: ''
+        }
+    },
+    {
+        title: 'Flame & Char',
+        category: 'NEXTJS / TAILWIND CSS',
+        text: 'Landing page de hamburguesas.',
+        image: 'https://res.cloudinary.com/dnx4de9yv/image/upload/v1774828548/Portafolio/efbwuu76demeru1zzcja.jpg',
+        link: 'https://landingpage-burger.vercel.app/',
+        link_github: '',
+        selling: false,
+        selling_note: '',
+        tecnologies: [
+            { name: 'Next.js', icon: nextjs },
+            { name: 'Tailwind CSS', icon: tailwind },
         ],
         admin: {
             cuenta: '',
