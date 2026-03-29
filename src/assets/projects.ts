@@ -15,6 +15,7 @@ import supabase from "../../public/logos/supabase.svg";
 import openai from "../../public/logos/openai.svg";
 import grok from "../../public/logos/grok.svg";
 import whatsappwebjs from "../../public/logos/whatsappwebjs.svg";
+import astro from "../../public/logos/astro.svg";
 
 const projectsData = [
     {
@@ -138,6 +139,27 @@ const projectsData = [
         user: {
             cuenta: 'User',
             contraseña: 'User1234'
+        }
+    },
+    {
+        title: 'Sisha',
+        category: 'ASTRO',
+        text: 'Landing page de hookahs para celebraciones.',
+        image: 'https://res.cloudinary.com/dnx4de9yv/image/upload/v1774825518/Portafolio/pf7x8gpzupjmao2hnjkr.jpg',
+        link: 'https://sisha-omega.vercel.app/',
+        link_github: '',
+        selling: false,
+        selling_note: '',
+        tecnologies: [
+            { name: 'Astro', icon: astro },
+        ],
+        admin: {
+            cuenta: '',
+            contraseña: ''
+        },
+        user: {
+            cuenta: '',
+            contraseña: ''
         }
     }
 ]
