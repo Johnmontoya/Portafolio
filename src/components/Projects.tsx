@@ -24,50 +24,88 @@ export interface Project {
         cuenta: string;
         contraseña: string;
     };
+    selling?: boolean;
+    selling_note?: string;
 }
 
 const Projects = () => {
-    const { t } = useI18n()
+    const { t } = useI18n();
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
     return (
-        <div id="projects" className="mt-16 mb-8">
-            <div className="absolute size-18 left-10 rounded-full bg-radial-[at_50%_75%] from-blue-200 via-purple-400 to-pink-900 to-90% blur-3xl" />
-            <div className="inline-block px-3 py-1.5 mb-9 rounded-lg bg-white/3 text-xs text-white/65">
-                {t('featuredProjects')}
+        <div id="projects" className="mt-32 mb-16 relative">
+            {/* Ambient light */}
+            <div className="absolute top-1/2 left-0 w-72 h-72 bg-neon-violet/8 rounded-full blur-[100px] pointer-events-none" />
+
+            {/* Section header */}
+            <div className="mb-14 flex items-end justify-between">
+                <div className="border-l-4 border-neon-green pl-4">
+                    <div className="inline-block mb-2 text-[10px] font-display tracking-[0.25em] uppercase text-neon-green font-bold">
+                        {t("featuredProjects")}
+                    </div>
+                    <h3 className="h-14 font-display font-extrabold text-4xl md:text-5xl uppercase tracking-tight text-white">
+                        {t("projects")}
+                    </h3>
+                </div>
+
+                {/* Project count */}
+                <div className="hidden md:flex items-center gap-2 font-mono text-xs text-gray-600 uppercase tracking-widest">
+                    <span className="text-neon-green font-bold text-xl">{projectsData.length}</span>
+                    <span>projects</span>
+                </div>
             </div>
 
-            <h3 className="font-['Fraunces',serif] font-bold text-3xl mb-3">{t('projects')}</h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4.5 mt-5">
-                {projectsData.map((project: any, i: number) => (
+            {/* Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+                {projectsData.map((project: Project, i: number) => (
                     <div
                         key={i}
-                        className="cursor-pointer"
+                        className="cursor-pointer group reveal show"
                         onClick={() => setSelectedProject(project)}
+                        style={{ transitionDelay: `${i * 60}ms` }}
                     >
-                        <div className="group relative h-68 rounded-xl overflow-hidden border border-white/6 bg-cover bg-center shadow-[0_6px_26px_rgba(2,2,10,0.6)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_32px_80px_rgba(123,75,255,0.12)] hover:border-white/12"
-                            style={{
-                                backgroundImage: `url('${project.image}')`,
-                            }}
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                            <div className="flex justify-between">
-                                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-bold bg-gradient-to-r from-[#4b84ff] to-[#4fffa7] text-white">
-                                    {project.category}
-                                </div>
-                                {project.selling && (
-                                    <div className="w-28 absolute top-0 right-0 px-2.5 py-1 rounded-md text-xs font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-center">
-                                        {project.selling_note}
+                        <div className="relative h-[360px] border border-white/15 bg-noir-lighter overflow-hidden transition-all duration-500 hover:border-neon-green/70 hover:shadow-[0_0_40px_rgba(87,165,255,0.12)] flex flex-col justify-end">
+
+                            {/* Background image */}
+                            <div
+                                className="absolute inset-0 bg-cover bg-center grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-700 group-hover:scale-[1.04]"
+                                style={{ backgroundImage: `url('${project.image}')` }}
+                            />
+
+                            {/* Gradient overlay */}
+                            <div className="absolute inset-0 linear-gradient-to-t from-noir-base via-noir-base/70 to-transparent group-hover:from-black/90 group-hover:via-black/40 transition-all duration-500" />
+
+                            {/* Hover neon border top */}
+                            <div className="absolute top-0 left-0 w-0 group-hover:w-full h-[2px] bg-neon-green transition-all duration-500 z-20" />
+
+                            {/* Content */}
+                            <div className="relative z-10 p-6 flex flex-col justify-end h-full">
+                                {/* Top badges */}
+                                <div className="flex justify-between items-start mb-auto">
+                                    <div className="px-3 py-1 text-[9px] font-display font-bold uppercase tracking-[0.2em] bg-black/80 border border-white/15 text-white/70 group-hover:border-neon-green/60 group-hover:text-neon-green transition-all duration-300 backdrop-blur-sm">
+                                        {project.category}
                                     </div>
-                                )}
-                            </div>
-                            <div className="absolute bottom-3 left-3 z-10 bg-black/50 px-2.5 py-1 rounded-md">
-                                <div className="font-bold text-white">
-                                    {project.title}
+                                    {project.selling && (
+                                        <div className="px-3 py-1 text-[9px] font-display font-bold uppercase tracking-widest bg-neon-violet/90 text-white backdrop-blur-sm">
+                                            {project.selling_note}
+                                        </div>
+                                    )}
                                 </div>
-                                <div className="text-white/70 text-xs mt-1">
-                                    {project.text.length > 80 ? project.text.substring(0, 80) + '...' : project.text}
+
+                                {/* Project info */}
+                                <div>
+                                    {/* Arrow indicator */}
+                                    <div className="mb-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-0 group-hover:translate-x-1">
+                                        <span className="text-neon-green text-xs font-mono uppercase tracking-widest">View project</span>
+                                        <span className="text-neon-green text-sm">→</span>
+                                    </div>
+
+                                    <h4 className="font-display font-bold text-2xl uppercase tracking-wide text-white group-hover:text-neon-green transition-colors duration-300 mb-2 leading-tight">
+                                        {project.title}
+                                    </h4>
+                                    <p className="text-gray-400 text-sm font-light leading-relaxed line-clamp-2 group-hover:text-gray-300 transition-colors duration-300">
+                                        {project.text}
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +118,7 @@ const Projects = () => {
                 onClose={() => setSelectedProject(null)}
             />
         </div>
-    )
-}
+    );
+};
 
-export default Projects
+export default Projects;
