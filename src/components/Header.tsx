@@ -3,6 +3,7 @@ import { useI18n } from "react-simple-i18n";
 import usaFlag from '../../public/eeuu.svg'
 import colombiaFlag from '../../public/colombia.svg'
 import logo from '../../public/logo.svg'
+import NavMobile from "./NavMobile";
 
 const Header = ({ setOpen }: { setOpen: (open: boolean) => void }) => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -70,7 +71,7 @@ const Header = ({ setOpen }: { setOpen: (open: boolean) => void }) => {
 
                     {/* Mobile Hamburger */}
                     <button
-                        className="md:hidden flex flex-col justify-center items-center gap-1.5 w-8 h-8 z-50 text-neon-green cursor-pointer"
+                        className="md:hidden flex flex-col justify-center items-center gap-1.5 w-8 h-8 z-50! text-neon-green cursor-pointer"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         aria-label="Toggle menu"
                     >
@@ -82,46 +83,7 @@ const Header = ({ setOpen }: { setOpen: (open: boolean) => void }) => {
             </header>
 
             {/* Mobile Nav Overlay */}
-            <div className={`inset-0 z-40 bg-black/98 bg-noise backdrop-blur-2xl transition-all duration-500 ease-in-out ${isMenuOpen ? 'fixed opacity-100 pointer-events-auto' : 'hidden opacity-0 pointer-events-none'}`}>
-                <div className="flex flex-col items-center justify-center min-h-screen pt-20 px-10">
-                    <nav className="flex flex-col items-center gap-8 w-full max-w-sm">
-                        {menu.map((item, index) => (
-                            <a
-                                key={item.title}
-                                href={item.href}
-                                onClick={() => setIsMenuOpen(false)}
-                                className={`text-3xl font-display font-bold uppercase tracking-[0.2em] transition-all duration-500 w-full text-center py-4 border-b border-white/5 hover:text-neon-green ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-                                style={{ transitionDelay: `${index * 100}ms` }}
-                            >
-                                {t(item.title)}
-                            </a>
-                        ))}
-
-                        <button
-                            onClick={() => {
-                                setIsMenuOpen(false);
-                                setOpen(true);
-                            }}
-                            className={`w-full mt-10 border-2 border-neon-green bg-transparent text-neon-green font-display font-bold uppercase tracking-widest py-5 transition-all duration-500 shadow-[6px_6px_0px_rgba(87,165,255,0.4)] active:translate-y-1 active:shadow-none ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-                            style={{ transitionDelay: `${menu.length * 100}ms` }}
-                        >
-                            {t('Contact')}
-                        </button>
-
-                        <div
-                            className={`flex gap-10 mt-12 transition-all duration-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-                            style={{ transitionDelay: `${(menu.length + 1) * 100}ms` }}
-                        >
-                            <button onClick={() => { i18n.setLang('enUS'); setIsMenuOpen(false); }} className="group p-4 border border-white/10 bg-noir-lighter hover:border-neon-green transition-all">
-                                <img src={usaFlag} alt="English" className="w-10 h-10 object-cover grayscale group-hover:grayscale-0 transition-all opacity-60 group-hover:opacity-100" />
-                            </button>
-                            <button onClick={() => { i18n.setLang('esPE'); setIsMenuOpen(false); }} className="group p-4 border border-white/10 bg-noir-lighter hover:border-neon-green transition-all">
-                                <img src={colombiaFlag} alt="Español" className="w-10 h-10 object-cover grayscale group-hover:grayscale-0 transition-all opacity-60 group-hover:opacity-100" />
-                            </button>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+            <NavMobile isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} setOpen={setOpen} />
         </>
     )
 }

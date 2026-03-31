@@ -33,7 +33,7 @@ function App() {
             </div>
           </div>*/}
 
-          <div className="fixed top-0 right-0 z-0 w-full md:w-2/4 h-2/4 pointer-events-none overflow-hidden">
+          <div className="fixed top-0 right-0 z-0 w-full lg:w-2/4 h-2/4 pointer-events-none overflow-hidden">
             <video
               autoPlay
               loop

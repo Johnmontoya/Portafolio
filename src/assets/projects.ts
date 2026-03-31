@@ -17,6 +17,9 @@ import grok from "/logos/grok.svg";
 import whatsappwebjs from "/logos/whatsappwebjs.svg";
 import astro from "/logos/astro.svg";
 import nextjs from "/logos/nextjs.svg";
+import redis from "/logos/redis.svg";
+import bullmq from "/logos/bullmq.svg";
+import docker from "/logos/docker.svg";
 
 const projectsData = [
     {
@@ -38,7 +41,35 @@ const projectsData = [
             { name: 'Jest', icon: jest },
             { name: 'Google Gemini', icon: gemini },
             { name: 'GitHub Actions', icon: githubaction },
-            { name: 'JWT', icon: jwt }
+            { name: 'JWT', icon: jwt },
+            { name: 'Docker', icon: docker }
+        ],
+        admin: {
+            cuenta: 'Admin',
+            contraseña: 'Admin1234'
+        },
+        user: {
+            cuenta: 'User',
+            contraseña: 'User1234'
+        }
+    },
+    {
+        title: 'ReportEleCom',
+        category: 'NODEJS / REACTJS',
+        text: 'Sistema de cola de reportes para EleCommerce con graficas en tiempo real',
+        image: 'https://res.cloudinary.com/dnx4de9yv/image/upload/v1774925698/Portafolio/ljp8nccjrjxlox7pibul.jpg',
+        link: 'https://report-ele-com.vercel.app',
+        link_github: 'https://github.com/Johnmontoya/ReportEleCom',
+        selling: false,
+        selling_note: '',
+        tecnologies: [
+            { name: 'React', icon: react },
+            { name: 'Node.js', icon: nodejs },
+            { name: 'MongoDB', icon: mongo },
+            { name: 'Redis', icon: redis },
+            { name: 'BullMQ', icon: bullmq },
+            { name: 'Tailwind CSS', icon: tailwind },
+            { name: 'Docker', icon: docker }
         ],
         admin: {
             cuenta: 'Admin',
@@ -69,7 +100,8 @@ const projectsData = [
             { name: 'Swagger', icon: swagger },
             { name: 'Google Gemini', icon: gemini },
             { name: 'GitHub Actions', icon: githubaction },
-            { name: 'JWT', icon: jwt }
+            { name: 'JWT', icon: jwt },
+            { name: 'Docker', icon: docker }
         ],
         admin: {
             cuenta: 'admin@example.com',

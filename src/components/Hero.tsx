@@ -60,7 +60,7 @@ const Hero = () => {
             {/* Main headline */}
             <h1
                 ref={addToRevealRefs}
-                className="h-52 font-display text-4xl md:text-[6rem] font-extrabold leading-[0.88] tracking-tighter mb-6 max-w-5xl uppercase animate-stagger-reveal"
+                className="h-24 md:h-52 font-display text-4xl md:text-[4.5rem] font-extrabold leading-[0.88] tracking-tighter mb-2 max-w-5xl uppercase animate-stagger-reveal"
                 style={{ animationDelay: "0.1s" }}
             >
                 {t("hiIm")}{" "}
@@ -124,8 +124,8 @@ const Hero = () => {
                 style={{ animationDelay: "0.42s" }}
             >
                 {[
-                    { num: "3+", label: "Projects shipped" },
-                    { num: "2+", label: "Years learning" },
+                    { num: "6+", label: "Personal Projects" },
+                    { num: "1+", label: "Years learning" },
                     { num: "∞", label: "Lines of code" },
                 ].map(({ num, label }) => (
                     <div key={label} className="flex flex-col">

@@ -18,6 +18,9 @@ const langData = {
         frontEndText: 'I create responsive user interfaces with React, focusing on usability, component structure, and performance.',
         close: 'Close',
         visitSite: 'Visit Site',
+        personalProjects: 'Personal Projects',
+        yearsLearning: 'Years learning',
+        linesOfCode: 'Lines of code',
     },
     esPE: {
         projects: 'Proyectos',
@@ -38,6 +41,9 @@ const langData = {
         frontEndText: 'Creo interfaces de usuario responsivas con React, centrándome en la usabilidad, la estructura de componentes y el rendimiento.',
         close: 'Cerrar',
         visitSite: 'Visitar Sitio',
+        personalProjects: 'Proyectos Personales',
+        yearsLearning: 'Años aprendiendo',
+        linesOfCode: 'Líneas de código',
     },
 }
 
