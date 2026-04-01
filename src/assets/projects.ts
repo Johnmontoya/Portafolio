@@ -20,6 +20,9 @@ import nextjs from "/logos/nextjs.svg";
 import redis from "/logos/redis.svg";
 import bullmq from "/logos/bullmq.svg";
 import docker from "/logos/docker.svg";
+import expo from "/logos/expo.svg";
+import lucidereact from "/logos/lucidereact.svg";
+import nativewind from "/logos/nativewind.svg";
 
 const projectsData = [
     {
@@ -108,7 +111,32 @@ const projectsData = [
             contraseña: 'Admin1234'
         },
         user: {
-            cuenta: 'usuario@gmail.com',
+            cuenta: 'user@gmail.com',
+            contraseña: 'User1234'
+        }
+    },
+    {
+        title: 'Crisol de Ideas App Mobile',
+        category: 'REACT NATIVE',
+        text: `Aplicación móvil de un Blog con arquitectura DDD y estética Neo-Editorial, optimizada con IA, seguridad JWT, 
+        animaciones fluidas, gestión de publicaciones y comentarios.`,
+        image: 'https://res.cloudinary.com/dnx4de9yv/image/upload/v1775008963/Portafolio/pcuqsb6q9r02zt98bk7n.jpg',
+        link: 'https://drive.google.com/file/d/1b_Pa2dvbGgvdwAZgv3biifFga8QbS4Qw/view?usp=drive_link',
+        link_github: 'https://github.com/Johnmontoya/blog-crisol-ideas-reactnative',
+        selling: false,
+        selling_note: '',
+        tecnologies: [
+            { name: 'React Native', icon: react },
+            { name: 'Expo', icon: expo },
+            { name: 'Lucide React', icon: lucidereact },
+            { name: 'NativeWind', icon: nativewind }
+        ],
+        admin: {
+            cuenta: 'admin@example.com',
+            contraseña: 'Admin1234'
+        },
+        user: {
+            cuenta: 'user@gmail.com',
             contraseña: 'User1234'
         }
     },
