@@ -21,6 +21,7 @@ const langData = {
         personalProjects: 'Personal Projects',
         yearsLearning: 'Years learning',
         linesOfCode: 'Lines of code',
+        downloadCV: 'Download CV',
     },
     esPE: {
         projects: 'Proyectos',
@@ -44,6 +45,7 @@ const langData = {
         personalProjects: 'Proyectos Personales',
         yearsLearning: 'Años aprendiendo',
         linesOfCode: 'Líneas de código',
+        downloadCV: 'Descargar CV',
     },
 }
 

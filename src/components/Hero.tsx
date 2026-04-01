@@ -108,6 +108,13 @@ const Hero = () => {
                     </span>
                 </a>
 
+                <a download href="https://drive.google.com/file/d/1pgMbJLUzBd3M3slrZ-8g_1Wqf4iAX5nX/view?usp=sharing" className="group relative border border-neon-green/60 px-8 py-4 font-display font-bold uppercase tracking-widest text-sm bg-neon-green/5 hover:bg-neon-green hover:text-black transition-all duration-300 flex items-center gap-3 overflow-hidden">
+                    <span className="relative z-10 flex items-center gap-3">
+                        {t("downloadCV")}
+                        <span className="group-hover:translate-x-1 transition-transform duration-300">↓</span>
+                    </span>
+                </a>
+
                 {/* Scroll indicator */}
                 <div className="hidden md:flex items-center gap-3 text-xs font-mono text-gray-600 uppercase tracking-widest">
                     <div className="w-6 h-10 border border-white/20 rounded-full flex items-start justify-center pt-2">
